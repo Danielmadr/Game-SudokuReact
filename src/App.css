@@ -1,0 +1,55 @@
+body,
+html {
+  height: 100vh; /* Isso garante que o corpo ocupa a altura total da tela */
+  margin: 0; /* Remove a margem padrão do corpo */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+
+/* Estilo para cada célula do tabuleiro */
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: blue; /* Ou a cor desejada para indicar a seleção */
+}
+
+.cell:hover {
+  background-color: #f2f2f2;
+}
+
+.cell.initial {
+  background-color: #e6e6e6;
+  cursor: not-allowed;
+}
